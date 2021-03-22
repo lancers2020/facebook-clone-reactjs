@@ -1,0 +1,718 @@
+:root {
+  --primary-color: #3b5998; //body
+  --tertiary-color: #fff; //parentNav, centerNav, etc
+  --secondary-color: #f0f2f5;
+  --primary2-color: #3578e5;
+}
+body {
+  background: var(--secondary-color);
+}
+.nav {
+  //position is fixed so that the nav bar
+  //wont be affected as well while the
+  //mydayArrow is being positioned absolute
+  //from its right being put into negative.
+  position: fixed;
+  height: 70px;
+  background: var(--tertiary-color);
+  width: 100%;
+  box-shadow: 0 1px 2px lightgrey;
+  z-index: 700;
+
+  .innerNav {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .centerNav {
+      //   background: wheat;
+      height: 100%;
+      margin: 0 auto;
+      width: 60%;
+    }
+    .leftNav {
+      position: absolute;
+      //   background: rgb(247, 202, 120);
+      height: 100%;
+      width: 165px;
+      left: 0;
+      top: 0;
+      display: flex;
+      .fbImageCta {
+        position: absolute;
+        margin-left: 1em;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+      }
+      .searchImageCta {
+        // background: red;
+        position: absolute;
+        left: 85px;
+        padding: 10px;
+        height: 100%;
+        &:hover {
+          cursor: pointer;
+        }
+        .borderRadius {
+          background: var(--secondary-color);
+          border-radius: 50%;
+          //   padding: 15px 8px 10px 15px;
+          width: 50px;
+          height: 50px;
+          .searchSign {
+            margin-top: 12px;
+            margin-bottom: 10px;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+    .rightNav {
+      position: absolute;
+      //   background: rgb(243, 233, 216);
+      height: 100%;
+      width: 300px;
+      right: 0;
+      top: 0;
+      display: flex;
+      .container {
+        // background: red;
+        width: 22%;
+        height: 108%;
+        margin: 0 3px;
+        .innerContainer {
+          background: var(--secondary-color);
+          width: 80%;
+          height: 67%;
+          margin: 10px 3px 6px 3px;
+          border-radius: 50%;
+          &:hover {
+            cursor: pointer;
+          }
+          &:hover + .createNavHiddenElement {
+            display: block;
+          }
+          &:hover + .messengerNavHiddenElement {
+            display: block;
+          }
+          &:hover + .notificationNavHiddenElement {
+            display: block;
+          }
+          .plusSign {
+            margin-top: 8px;
+            margin-left: 12px;
+          }
+          .messengerSign {
+            margin-top: 11px;
+            margin-left: 14px;
+          }
+          .notificationSign {
+            margin-top: 8px;
+            margin-left: 12px;
+          }
+        }
+        .account {
+          //   background: red;
+          margin: 10px 3px 6px 3px;
+          width: 80%;
+          height: 70%;
+          position: relative;
+          &:hover {
+            cursor: pointer;
+          }
+          &:hover + .accountNavHiddenElement {
+            display: block;
+          }
+          .accountImg {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//MyDay Card
+.homeContent {
+  .homeFeeds {
+    width: 648px;
+    margin: 0 auto;
+    .mydayContainer {
+      //   border: 1px solid red;
+      padding: 30px 0;
+      position: relative;
+      top: 80px;
+      display: flex;
+      .mydayArrow {
+        background-color: var(--tertiary-color); //var(--secondary-color);
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        margin-left: 95%;
+        top: 120px;
+        position: absolute;
+        text-align: center;
+        .hiOutlineArrowRight {
+          margin: 15px;
+        }
+      }
+      .mydayCard {
+        // border: 1px solid blue;
+        width: 170px;
+        height: 250px;
+        position: relative;
+        padding: 0 5px;
+        padding-left: 0;
+        .mydayUsername {
+          position: absolute;
+          bottom: 0;
+          color: white;
+          padding: 10px;
+          font-size: 1.3em;
+          font-weight: bold;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+      .img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+    //below is another component
+  }
+}
+.mydayUserProfilePic {
+  position: absolute;
+  top: 0;
+  padding: 10px 10px;
+  img {
+    height: 100%;
+    width: 100%;
+    border: 6px solid var(--primary2-color);
+    border-radius: 50%;
+  }
+}
+
+//Create Status
+.statusCta {
+  padding: 15px 25px;
+
+  .profileAndInput {
+    position: relative;
+
+    display: flex;
+    place-content: space-between;
+    .createStatusAvatar {
+      position: relative;
+    }
+  }
+}
+.avatarFrame {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.statusBreak {
+  border-bottom: 1px solid lightgray;
+  margin-top: 15px;
+}
+.addOns {
+  display: flex;
+  place-content: space-between;
+  margin-top: 1em;
+  .liveVideo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: grey;
+    .liveVidCta {
+      padding-right: 5px;
+    }
+    .liveVidTextCta {
+      margin-top: 5px;
+      padding-left: 5px;
+    }
+  }
+  .photoVideo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: grey;
+    .photoVidCta {
+      padding-right: 5px;
+    }
+    .photoVidTextCta {
+      margin-top: 5px;
+      padding-left: 5px;
+    }
+  }
+  .feelingActivity {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: grey;
+    .feelActCta {
+      padding-right: 5px;
+    }
+    .feelActTextCta {
+      margin-top: 5px;
+      padding-left: 5px;
+    }
+  }
+}
+
+//Create Room
+.roomCta {
+  display: flex;
+  padding: 10px;
+  overflow-x: scroll;
+  scrollbar-width: 0;
+
+  //this hides the bar of scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .sample {
+    color: grey;
+    border: 2px solid blue;
+    border-radius: 5em;
+    margin: 10px 20px;
+  }
+  //   .roomIconCta {
+  //     background-image: linear-gradient(45deg, #f3ec78, #af4261);
+  //     background-size: 100%;
+  //     -webkit-background-clip: text;
+  //     -moz-background-clip: text;
+  //     -webkit-text-fill-color: transparent;
+  //     -moz-text-fill-color: transparent;
+  //   }
+  .createRoomWrapper {
+    border: 2px solid skyblue;
+    margin: 5px 10px;
+    border-radius: 2em;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    .createRoomIconCta {
+      display: flex;
+    }
+    .roomIconTextCta {
+      width: 120px;
+      margin-top: 10px;
+      margin-left: 10px;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      display: block;
+      background-image: -webkit-linear-gradient(blue, purple);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+.redDot {
+  border: 4px solid #fff;
+  height: 10px;
+  width: 10px;
+  background: rgb(255, 53, 53);
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+}
+.greenDot {
+  border: 4px solid #fff;
+  height: 10px;
+  width: 10px;
+  background: green;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.createRoomAvatar {
+  //   background: red;
+  position: relative;
+  height: 90%;
+  margin: 0 10px;
+}
+
+//People You May Know
+.peopleCta {
+  //   border: 1px solid red;
+  //   background: yellow;
+  //   width: 100%;
+  //   height: 100%;
+  width: 100%;
+  //   height: 100%;
+  position: relative;
+  padding-top: 13%;
+  padding-bottom: 10px;
+
+  //   background: red;
+  //   padding: 30px 20px;
+  .peopleText {
+    // border: 1px solid green;
+    margin: 10px 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    h2 {
+      letter-spacing: 0.5px;
+      color: rgb(105, 102, 102);
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  .peopleCardsScrollBar {
+    width: 100%;
+    // height: 70%;
+    // border: 1px solid yellow;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .peopleCardsCta {
+      width: 100%;
+      height: 420px;
+      //   background: red;
+      display: flex;
+      position: relative;
+      .peopleCards {
+        display: flex;
+        align-items: center;
+        background: blue;
+        border-radius: 10px;
+        // border: 1px solid blue;
+        box-shadow: 0 0 10px 8px lightgrey;
+        margin-left: 20px;
+        position: relative;
+        width: 250px;
+        height: 390px;
+        margin-top: 15px;
+        .peopleCardsBotPart {
+          width: 250px;
+          height: 150px;
+          background: var(--tertiary-color);
+          position: absolute;
+          top: 240px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+            margin: 15px 0 0 15px;
+          }
+          .peopleAvatarComponent {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+            h4 {
+              margin: 15px;
+              color: grey;
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: 400;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.addFriendButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  padding: 8px 0;
+  width: 90%;
+  background-color: #e7f3ff;
+  color: rgb(55, 122, 247);
+  margin: 0 12.5px 200px 12.5px;
+  height: 25%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &:hover {
+    background: rgb(216, 231, 248);
+    cursor: pointer;
+  }
+}
+.seeAllButtonContainer {
+  width: 90%;
+  background: var(--tertiary-color);
+  padding: 10px;
+  color: rgb(55, 122, 247);
+  margin: 0 auto;
+  height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  &:hover {
+    background: rgb(225, 229, 233);
+    cursor: pointer;
+  }
+}
+.addFriendBtn {
+  width: 100%;
+  align-self: center;
+}
+.avatarPicturePYMK {
+  width: 100%;
+  margin: -136px 0 0 0;
+}
+
+//Status Posts
+.statusPostsCta {
+  border-radius: 10px;
+  //   padding: 10px;
+  //   border: 1px solid red;
+  .statusPostsTopPart {
+    display: flex;
+    margin: 0 10px;
+    // padding: 10px;
+    //display evenly? ask kris
+    place-content: space-between;
+    .avatarNameDateStatusPosts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .nameDateStatusPosts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // border: 1px solid red;
+        line-height: 10px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        .nameStatusPosts {
+          padding: 10px 0;
+          font-size: 19px;
+          font-weight: bold;
+        }
+        .dateStatusPosts {
+          padding: 10px 0;
+          font-size: 15px;
+        }
+      }
+    }
+    .optionsStatusPosts {
+      //   border: 1px solid red;
+      background: var(--tertiary-color);
+      &:hover {
+        background: lightgrey;
+      }
+      //   width: 10%;
+      margin: 12px 8px;
+      padding: 8px 13px 12px 10px;
+      color: black;
+      font-size: 60px;
+      letter-spacing: -5px;
+      line-height: 0;
+      border-radius: 50%;
+    }
+  }
+  .statusPostsMidPart {
+    padding: 200px 20px;
+    display: flex;
+    // background: rgb(123, 223, 253);
+    .statusPostsCaption {
+      font-size: 40px;
+      margin: auto;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+}
+.avatarBorderStatusPosts {
+  border: 3px solid rgb(61, 106, 255);
+  padding: 1px;
+  border-radius: 50%;
+  height: 63%;
+}
+.statusPostsBotPart {
+  padding: 10px;
+  .displayLikeCommentShareCta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    place-content: space-between;
+    .emojiReactionsCta {
+      position: relative;
+      //   border: 1px solid red;
+      width: 50%;
+      height: 30px;
+    }
+  }
+}
+.reactionFirstEmoji {
+  border: 3px solid var(--tertiary-color);
+  border-radius: 50%;
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.reactionSecondEmoji {
+  border: 3px solid var(--tertiary-color);
+  border-radius: 50%;
+  z-index: 300;
+  position: absolute;
+  top: 0;
+  left: 26px;
+}
+.reactionThirdEmoji {
+  border: 3px solid var(--tertiary-color);
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 52px;
+}
+.emojiReactionsCountCta {
+  position: absolute;
+  top: 5px;
+  left: 85px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  color: rgb(104, 104, 104);
+}
+.commentsSharesCta {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  //   border: 1px solid red;
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  color: grey;
+  .statusPostsCommentCount {
+    margin-left: 20px;
+  }
+  .statusPostsSharesCount {
+    margin-left: 20px;
+  }
+}
+.reactionsHahaCta {
+  position: absolute;
+  top: 2px;
+}
+.break {
+  margin-top: 8px;
+  border-bottom: lightgrey solid 2px;
+  margin-bottom: 10px;
+}
+.likeCommentShareCta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  place-content: space-evenly;
+  .buttonStatusPosts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.createNavHiddenElement {
+  display: none;
+  padding: 10px 15px;
+  background: rgb(53, 53, 53);
+  position: absolute;
+  top: 75px;
+  right: 225px;
+  z-index: 999;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.messengerNavHiddenElement {
+  display: none;
+  padding: 10px 15px;
+  background: rgb(53, 53, 53);
+  position: absolute;
+  top: 75px;
+  right: 135px;
+  z-index: 999;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.notificationNavHiddenElement {
+  display: none;
+  padding: 10px 15px;
+  background: rgb(53, 53, 53);
+  position: absolute;
+  top: 75px;
+  right: 60px;
+  z-index: 999;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.accountNavHiddenElement {
+  display: none;
+  padding: 10px 15px;
+  background: rgb(53, 53, 53);
+  position: absolute;
+  top: 75px;
+  right: 15px;
+  z-index: 999;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// .plusSign:hover + .createNavHiddenElement {
+//   display: block;
+// }
+
+//this is apparently how u create hidden
+//hover effect
+
+// .div {
+//   padding: 10px;
+//   display: flex;
+//   &:hover + .hidden {
+//     display: block;
+//     color: red;
+//   }
+// }
+// .hidden {
+//   display: none;
+// }

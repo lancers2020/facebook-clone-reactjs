@@ -1,0 +1,850 @@
+:root {
+  --primary-color: #3b5998;
+  --tertiary-color: #fff;
+  --secondary-color: #f0f2f5;
+  --primary2-color: #3578e5;
+}
+
+body {
+  background: var(--secondary-color);
+}
+
+.nav {
+  position: fixed;
+  height: 70px;
+  background: var(--tertiary-color);
+  width: 100%;
+  -webkit-box-shadow: 0 1px 2px lightgrey;
+          box-shadow: 0 1px 2px lightgrey;
+  z-index: 700;
+}
+
+.nav .innerNav {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.nav .innerNav .centerNav {
+  height: 100%;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.nav .innerNav .leftNav {
+  position: absolute;
+  height: 100%;
+  width: 165px;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav .innerNav .leftNav .fbImageCta {
+  position: absolute;
+  margin-left: 1em;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.nav .innerNav .leftNav .searchImageCta {
+  position: absolute;
+  left: 85px;
+  padding: 10px;
+  height: 100%;
+}
+
+.nav .innerNav .leftNav .searchImageCta:hover {
+  cursor: pointer;
+}
+
+.nav .innerNav .leftNav .searchImageCta .borderRadius {
+  background: var(--secondary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.nav .innerNav .leftNav .searchImageCta .borderRadius .searchSign {
+  margin-top: 12px;
+  margin-bottom: 10px;
+  margin-left: 12px;
+}
+
+.nav .innerNav .rightNav {
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav .innerNav .rightNav .container {
+  width: 22%;
+  height: 108%;
+  margin: 0 3px;
+}
+
+.nav .innerNav .rightNav .container .innerContainer {
+  background: var(--secondary-color);
+  width: 80%;
+  height: 67%;
+  margin: 10px 3px 6px 3px;
+  border-radius: 50%;
+}
+
+.nav .innerNav .rightNav .container .innerContainer:hover {
+  cursor: pointer;
+}
+
+.nav .innerNav .rightNav .container .innerContainer:hover + .createNavHiddenElement {
+  display: block;
+}
+
+.nav .innerNav .rightNav .container .innerContainer:hover + .messengerNavHiddenElement {
+  display: block;
+}
+
+.nav .innerNav .rightNav .container .innerContainer:hover + .notificationNavHiddenElement {
+  display: block;
+}
+
+.nav .innerNav .rightNav .container .innerContainer .plusSign {
+  margin-top: 8px;
+  margin-left: 12px;
+}
+
+.nav .innerNav .rightNav .container .innerContainer .messengerSign {
+  margin-top: 11px;
+  margin-left: 14px;
+}
+
+.nav .innerNav .rightNav .container .innerContainer .notificationSign {
+  margin-top: 8px;
+  margin-left: 12px;
+}
+
+.nav .innerNav .rightNav .container .account {
+  margin: 10px 3px 6px 3px;
+  width: 80%;
+  height: 70%;
+  position: relative;
+}
+
+.nav .innerNav .rightNav .container .account:hover {
+  cursor: pointer;
+}
+
+.nav .innerNav .rightNav .container .account:hover + .accountNavHiddenElement {
+  display: block;
+}
+
+.nav .innerNav .rightNav .container .account .accountImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.homeContent .homeFeeds {
+  width: 648px;
+  margin: 0 auto;
+}
+
+.homeContent .homeFeeds .mydayContainer {
+  padding: 30px 0;
+  position: relative;
+  top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.homeContent .homeFeeds .mydayContainer .mydayArrow {
+  background-color: var(--tertiary-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  margin-left: 95%;
+  top: 120px;
+  position: absolute;
+  text-align: center;
+}
+
+.homeContent .homeFeeds .mydayContainer .mydayArrow .hiOutlineArrowRight {
+  margin: 15px;
+}
+
+.homeContent .homeFeeds .mydayContainer .mydayCard {
+  width: 170px;
+  height: 250px;
+  position: relative;
+  padding: 0 5px;
+  padding-left: 0;
+}
+
+.homeContent .homeFeeds .mydayContainer .mydayCard .mydayUsername {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.homeContent .homeFeeds .mydayContainer .mydayCard .mydayUsername:hover {
+  font-weight: bold;
+}
+
+.homeContent .homeFeeds .mydayContainer .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.mydayUserProfilePic {
+  position: absolute;
+  top: 0;
+  padding: 10px 10px;
+}
+
+.mydayUserProfilePic img {
+  height: 100%;
+  width: 100%;
+  border: 6px solid var(--primary2-color);
+  border-radius: 50%;
+}
+
+.statusCta {
+  padding: 15px 25px;
+}
+
+.statusCta .profileAndInput {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.statusCta .profileAndInput .createStatusAvatar {
+  position: relative;
+}
+
+.avatarFrame {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.statusBreak {
+  border-bottom: 1px solid lightgray;
+  margin-top: 15px;
+}
+
+.addOns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+  margin-top: 1em;
+}
+
+.addOns .liveVideo {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: grey;
+}
+
+.addOns .liveVideo .liveVidCta {
+  padding-right: 5px;
+}
+
+.addOns .liveVideo .liveVidTextCta {
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.addOns .photoVideo {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: grey;
+}
+
+.addOns .photoVideo .photoVidCta {
+  padding-right: 5px;
+}
+
+.addOns .photoVideo .photoVidTextCta {
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.addOns .feelingActivity {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: grey;
+}
+
+.addOns .feelingActivity .feelActCta {
+  padding-right: 5px;
+}
+
+.addOns .feelingActivity .feelActTextCta {
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.roomCta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  overflow-x: scroll;
+  scrollbar-width: 0;
+}
+
+.roomCta::-webkit-scrollbar {
+  display: none;
+}
+
+.roomCta .sample {
+  color: grey;
+  border: 2px solid blue;
+  border-radius: 5em;
+  margin: 10px 20px;
+}
+
+.roomCta .createRoomWrapper {
+  border: 2px solid skyblue;
+  margin: 5px 10px;
+  border-radius: 2em;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.roomCta .createRoomWrapper .createRoomIconCta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.roomCta .createRoomWrapper .roomIconTextCta {
+  width: 120px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  background-image: -webkit-linear-gradient(blue, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.redDot {
+  border: 4px solid #fff;
+  height: 10px;
+  width: 10px;
+  background: #ff3535;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+}
+
+.greenDot {
+  border: 4px solid #fff;
+  height: 10px;
+  width: 10px;
+  background: green;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.createRoomAvatar {
+  position: relative;
+  height: 90%;
+  margin: 0 10px;
+}
+
+.peopleCta {
+  width: 100%;
+  position: relative;
+  padding-top: 13%;
+  padding-bottom: 10px;
+}
+
+.peopleCta .peopleText {
+  margin: 10px 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.peopleCta .peopleText h2 {
+  letter-spacing: 0.5px;
+  color: #696666;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.peopleCta .peopleCardsScrollBar {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.peopleCta .peopleCardsScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+.peopleCta .peopleCardsScrollBar .peopleCardsCta {
+  width: 100%;
+  height: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.peopleCta .peopleCardsScrollBar .peopleCardsCta .peopleCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: blue;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px 8px lightgrey;
+          box-shadow: 0 0 10px 8px lightgrey;
+  margin-left: 20px;
+  position: relative;
+  width: 250px;
+  height: 390px;
+  margin-top: 15px;
+}
+
+.peopleCta .peopleCardsScrollBar .peopleCardsCta .peopleCards .peopleCardsBotPart {
+  width: 250px;
+  height: 150px;
+  background: var(--tertiary-color);
+  position: absolute;
+  top: 240px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.peopleCta .peopleCardsScrollBar .peopleCardsCta .peopleCards .peopleCardsBotPart h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0 15px;
+}
+
+.peopleCta .peopleCardsScrollBar .peopleCardsCta .peopleCards .peopleCardsBotPart .peopleAvatarComponent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+}
+
+.peopleCta .peopleCardsScrollBar .peopleCardsCta .peopleCards .peopleCardsBotPart .peopleAvatarComponent h4 {
+  margin: 15px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.addFriendButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  padding: 8px 0;
+  width: 90%;
+  background-color: #e7f3ff;
+  color: #377af7;
+  margin: 0 12.5px 200px 12.5px;
+  height: 25%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.addFriendButtonContainer:hover {
+  background: #d8e7f8;
+  cursor: pointer;
+}
+
+.seeAllButtonContainer {
+  width: 90%;
+  background: var(--tertiary-color);
+  padding: 10px;
+  color: #377af7;
+  margin: 0 auto;
+  height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+.seeAllButtonContainer:hover {
+  background: #e1e5e9;
+  cursor: pointer;
+}
+
+.addFriendBtn {
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.avatarPicturePYMK {
+  width: 100%;
+  margin: -136px 0 0 0;
+}
+
+.statusPostsCta {
+  border-radius: 10px;
+}
+
+.statusPostsCta .statusPostsTopPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px;
+  place-content: space-between;
+}
+
+.statusPostsCta .statusPostsTopPart .avatarNameDateStatusPosts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.statusPostsCta .statusPostsTopPart .avatarNameDateStatusPosts .nameDateStatusPosts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 10px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.statusPostsCta .statusPostsTopPart .avatarNameDateStatusPosts .nameDateStatusPosts .nameStatusPosts {
+  padding: 10px 0;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.statusPostsCta .statusPostsTopPart .avatarNameDateStatusPosts .nameDateStatusPosts .dateStatusPosts {
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.statusPostsCta .statusPostsTopPart .optionsStatusPosts {
+  background: var(--tertiary-color);
+  margin: 12px 8px;
+  padding: 8px 13px 12px 10px;
+  color: black;
+  font-size: 60px;
+  letter-spacing: -5px;
+  line-height: 0;
+  border-radius: 50%;
+}
+
+.statusPostsCta .statusPostsTopPart .optionsStatusPosts:hover {
+  background: lightgrey;
+}
+
+.statusPostsCta .statusPostsMidPart {
+  padding: 200px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.statusPostsCta .statusPostsMidPart .statusPostsCaption {
+  font-size: 40px;
+  margin: auto;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.avatarBorderStatusPosts {
+  border: 3px solid #3d6aff;
+  padding: 1px;
+  border-radius: 50%;
+  height: 63%;
+}
+
+.statusPostsBotPart {
+  padding: 10px;
+}
+
+.statusPostsBotPart .displayLikeCommentShareCta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  place-content: space-between;
+}
+
+.statusPostsBotPart .displayLikeCommentShareCta .emojiReactionsCta {
+  position: relative;
+  width: 50%;
+  height: 30px;
+}
+
+.reactionFirstEmoji {
+  border: 3px solid var(--tertiary-color);
+  border-radius: 50%;
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.reactionSecondEmoji {
+  border: 3px solid var(--tertiary-color);
+  border-radius: 50%;
+  z-index: 300;
+  position: absolute;
+  top: 0;
+  left: 26px;
+}
+
+.reactionThirdEmoji {
+  border: 3px solid var(--tertiary-color);
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 52px;
+}
+
+.emojiReactionsCountCta {
+  position: absolute;
+  top: 5px;
+  left: 85px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  color: #686868;
+}
+
+.commentsSharesCta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  color: grey;
+}
+
+.commentsSharesCta .statusPostsCommentCount {
+  margin-left: 20px;
+}
+
+.commentsSharesCta .statusPostsSharesCount {
+  margin-left: 20px;
+}
+
+.reactionsHahaCta {
+  position: absolute;
+  top: 2px;
+}
+
+.break {
+  margin-top: 8px;
+  border-bottom: lightgrey solid 2px;
+  margin-bottom: 10px;
+}
+
+.likeCommentShareCta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  place-content: space-evenly;
+}
+
+.likeCommentShareCta .buttonStatusPosts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+}
+
+.likeCommentShareCta .buttonStatusPosts:hover {
+  cursor: pointer;
+}
+
+.createNavHiddenElement {
+  display: none;
+  padding: 10px 15px;
+  background: #353535;
+  position: absolute;
+  top: 75px;
+  right: 225px;
+  z-index: 999;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.messengerNavHiddenElement {
+  display: none;
+  padding: 10px 15px;
+  background: #353535;
+  position: absolute;
+  top: 75px;
+  right: 135px;
+  z-index: 999;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.notificationNavHiddenElement {
+  display: none;
+  padding: 10px 15px;
+  background: #353535;
+  position: absolute;
+  top: 75px;
+  right: 60px;
+  z-index: 999;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.accountNavHiddenElement {
+  display: none;
+  padding: 10px 15px;
+  background: #353535;
+  position: absolute;
+  top: 75px;
+  right: 15px;
+  z-index: 999;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*# sourceMappingURL=homepage.css.map */
