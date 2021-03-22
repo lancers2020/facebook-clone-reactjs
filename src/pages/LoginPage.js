@@ -77,7 +77,7 @@ function TempCard() {
       </div>
       <div>
         <div className={classes.buttons}>
-          <Button label='Login' fontSize='26px' />
+          <Button label='Test Git' fontSize='26px' />
           <h3 className={classes.h3}>
             <a className={classes.forgot} href='www.facebook.com'>
               Forgot Password?
