@@ -77,7 +77,7 @@ function TempCard() {
       </div>
       <div>
         <div className={classes.buttons}>
-          <Button label='Login' fontSize='26px' />
+          <Button label='Sample' fontSize='26px' />
           <h3 className={classes.h3}>
             <a className={classes.forgot} href='www.facebook.com'>
               Forgot Password?
@@ -85,7 +85,7 @@ function TempCard() {
           </h3>
           <div className={classes.break}></div>
           <Button
-            label='Create New Account'
+            label='Registir'
             backgroundColor='#42B72A'
             width='43%'
             fontSize='22px'
