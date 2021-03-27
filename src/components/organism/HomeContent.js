@@ -7,8 +7,12 @@ function HomeContent() {
   return (
     <div className='homeContent'>
       <HomeLeftContent />
-      <HomeFeeds />
-      <HomeRightContent />
+      <div className='homefeedsParentCta'>
+        <HomeFeeds />
+      </div>
+      <div className='homeRightContentParentCta'>
+        <HomeRightContent />
+      </div>
     </div>
   );
 }
