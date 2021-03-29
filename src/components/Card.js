@@ -4,10 +4,19 @@ import { createUseStyles } from 'react-jss';
 //the card should have properties to be
 //passed such as: input, button
 
-function Card({ padding, contents, margin, border, color, width, height }) {
+function Card({
+  padding,
+  contents,
+  margin,
+  border,
+  color,
+  width,
+  height,
+  boxShadow = '0 1px 2px lightgrey',
+}) {
   const useStyles = createUseStyles({
     wrapper: {
-      boxShadow: '0 1px 2px lightgrey',
+      boxShadow: boxShadow,
       border: border,
       borderRadius: '12px',
       backgroundColor: '#fff',

@@ -79,7 +79,7 @@
         top: 0;
         display: flex;
         .container {
-          // background: red;
+          background: red;
           width: 22%;
           height: 108%;
           margin: 0 3px;
@@ -2815,55 +2815,175 @@
   }
   .homeRightContentParentCta {
     width: 375px;
-    height: 92%;
+    // height: 92%;
     // border: 1px solid red;
     display: block;
-    // background: blue;
+    // background: yellow;
     position: fixed;
     top: 70px;
     right: 0;
+    z-index: 1;
+    overflow-y: scroll;
     .homeRightContent {
-      .upperPartRightContentCta {
-        border-bottom: 1px solid lightgrey;
-        h2 {
-          font-weight: none;
-          color: grey;
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        .sponsorRightContentCta {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          //   place-content: space-evenly;
-          //   width: 100%;
-          margin: 20px 0;
-          img {
-            border-radius: 15px;
-            width: 130px;
-            height: 130px;
-            margin: 0 10px 0 0;
-          }
-          .sponsorRightContentLabelCta {
-            font-family: Arial, Helvetica, sans-serif;
-            h4 {
-              margin: 0 auto;
-              font-size: 17px;
-            }
-            h5 {
-              margin: 0 auto;
-              color: grey;
-              font-weight: none;
-            }
-          }
-        }
-      }
+      //   background: red;
       .lowerPartRightContentCta {
         display: block;
+
+        .imageAvatarLowerPartCta {
+          width: 40px;
+          height: 40px;
+          position: relative;
+        }
       }
     }
   }
   .homefeedsParentCta {
     width: 70%;
     display: block;
+  }
+  .upperPartRightContentCta {
+    padding: 10px 10px 0 10px;
+    h2 {
+      font-weight: none;
+      color: grey;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .sponsorRightContentCta {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      //   place-content: space-evenly;
+      //   width: 100%;
+      margin: 20px 0;
+      img {
+        border-radius: 15px;
+        width: 130px;
+        height: 130px;
+        margin: 0 10px 0 0;
+      }
+      .sponsorRightContentLabelCta {
+        font-family: Arial, Helvetica, sans-serif;
+        h4 {
+          margin: 0 auto;
+          font-size: 17px;
+        }
+        h5 {
+          margin: 0 auto;
+          color: grey;
+          font-weight: none;
+        }
+      }
+    }
+  }
+  .lowerPartRightContentContacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    &:hover + .lowerPartRightContentHidden {
+      display: block;
+    }
+
+    // &:hover + .lowerPartRightontentHidden {
+    //   display: block;
+    // }
+
+    &:hover {
+      background: rgb(235, 233, 233);
+    }
+    .labelAvatarLowerPartCta {
+      margin-left: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 19px;
+      font-weight: bold;
+    }
+  }
+
+  .borderBottomMidHomeContent {
+    border-bottom: 1px solid lightgrey;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .lowerPartRightContentHidden {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    // background: var(--tertiary-color);
+    // background: red;
+    z-index: 999;
+    left: -600px;
+    width: 550px;
+    height: 200px;
+    margin-top: -40%;
+  }
+  //note: i did not position relative
+  //this parent since it wont allow
+  //our hidden element to
+  //overlap its left property.
+  .contactHeader {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    place-content: space-between;
+    padding: 10px;
+    .contactLabel {
+      font-size: 23px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: grey;
+      width: 60%;
+    }
+    .contactIcons {
+      display: flex;
+      flex-direction: row;
+      place-content: space-between;
+      width: 40%;
+      .contactIconNewRoom {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        padding: 5px 0 0 5px;
+        &:hover {
+          background: lightgray;
+        }
+      }
+      .contactIconSearch {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        padding: 10px 0 0 10px;
+        &:hover {
+          background: lightgray;
+        }
+      }
+      .contactIconOptions {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        padding: 10px 0 0 10px;
+        font-size: 30px;
+        line-height: 0;
+        &:hover {
+          background: lightgray;
+        }
+      }
+    }
+  }
+  .contactsPopUpCta {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    place-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    .contactsPopUpAvatar {
+      width: 30%;
+      background: red;
+      position: relative;
+    }
+    .contactsPopUpDetails {
+      width: 65%;
+      background: red;
+    }
   }
 }
