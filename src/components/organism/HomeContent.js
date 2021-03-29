@@ -10,8 +10,10 @@ function HomeContent() {
       <div className='homefeedsParentCta'>
         <HomeFeeds />
       </div>
-      <div className='homeRightContentParentCta'>
-        <HomeRightContent />
+      <div className='kapoy'>
+        <div className='homeRightContentParentCta'>
+          <HomeRightContent />
+        </div>
       </div>
     </div>
   );

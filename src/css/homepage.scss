@@ -79,7 +79,7 @@
         top: 0;
         display: flex;
         .container {
-          background: red;
+          //   background: red;
           width: 22%;
           height: 108%;
           margin: 0 3px;
@@ -142,6 +142,7 @@
     .homeFeeds {
       width: 648px;
       margin: 0 auto;
+      z-index: 0;
       .mydayContainer {
         // border: 1px solid red;
         padding: 30px 0;
@@ -2814,20 +2815,26 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   .homeRightContentParentCta {
+    // padding-left: 50%;
     width: 375px;
     // height: 92%;
     // border: 1px solid red;
     display: block;
     // background: yellow;
+
     position: fixed;
     top: 70px;
     right: 0;
     z-index: 1;
     overflow-y: scroll;
+    bottom: 0;
     .homeRightContent {
+      //   overflow-y: scroll;
       //   background: red;
+      //   position: relative;
       .lowerPartRightContentCta {
         display: block;
+        // position: relative;
 
         .imageAvatarLowerPartCta {
           width: 40px;
@@ -2881,7 +2888,7 @@
     align-items: center;
     padding: 10px;
     border-radius: 15px;
-    position: relative;
+    // position: relative;
     &:hover + .lowerPartRightContentHidden {
       display: block;
     }
@@ -2912,12 +2919,15 @@
     padding: 10px;
     // background: var(--tertiary-color);
     // background: red;
-    z-index: 999;
-    left: -600px;
+    z-index: 1;
+    margin-left: -258%;
     width: 550px;
     height: 200px;
-    margin-top: -40%;
+    margin-top: -15%;
   }
+  //   .tempSample {
+  //     position: relative;
+  //   }
   //note: i did not position relative
   //this parent since it wont allow
   //our hidden element to
@@ -2978,12 +2988,29 @@
     font-family: Arial, Helvetica, sans-serif;
     .contactsPopUpAvatar {
       width: 30%;
+      //   height: 120px;
+      //   height: 120px;
       background: red;
       position: relative;
+      .greenDot {
+        border: 4px solid #fff;
+        height: 20px;
+        width: 20px;
+        background: green;
+        border-radius: 50%;
+        position: absolute;
+        right: 40px;
+        bottom: 5px;
+      }
     }
     .contactsPopUpDetails {
       width: 65%;
       background: red;
+      display: flex;
+      flex-direction: column;
     }
+  }
+  .kapoy {
+    // position: relative;
   }
 }

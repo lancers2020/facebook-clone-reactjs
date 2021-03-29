@@ -18,7 +18,6 @@ function SampleContactsPopUp({ i }) {
           size={120}
           type='online'
           radius={60}
-          className='contactsPopUpDotCta'
         />
       </div>
       <div className='contactsPopUpDetails'>Details</div>
@@ -80,7 +79,92 @@ function HomeRightContent() {
                   height={'100%'}
                   boxShadow={'0 0 8px 1px lightgrey'}
                 />
-                padding, contents, margin, border, color, width, height
+              </div>
+            </div>
+          );
+        })}
+        {userstories.map((item, i) => {
+          return (
+            <div className='tempSample'>
+              <div className='lowerPartRightContentContacts' key={i}>
+                <div className='imageAvatarLowerPartCta'>
+                  <Avatar
+                    image={item.thumbnail}
+                    alt={item.name}
+                    size={40}
+                    type='online'
+                    radius={50}
+                    className='avatarDotCta'
+                  />
+                </div>
+
+                <div className='labelAvatarLowerPartCta'>{item.name}</div>
+              </div>
+              <div className='lowerPartRightContentHidden'>
+                <Card
+                  padding={10}
+                  contents={<SampleContactsPopUp i={i} />}
+                  width={'100%'}
+                  height={'100%'}
+                  boxShadow={'0 0 8px 1px lightgrey'}
+                />
+              </div>
+            </div>
+          );
+        })}
+        {userstories.map((item, i) => {
+          return (
+            <div className='tempSample'>
+              <div className='lowerPartRightContentContacts' key={i}>
+                <div className='imageAvatarLowerPartCta'>
+                  <Avatar
+                    image={item.thumbnail}
+                    alt={item.name}
+                    size={40}
+                    type='online'
+                    radius={50}
+                    className='avatarDotCta'
+                  />
+                </div>
+
+                <div className='labelAvatarLowerPartCta'>{item.name}</div>
+              </div>
+              <div className='lowerPartRightContentHidden'>
+                <Card
+                  padding={10}
+                  contents={<SampleContactsPopUp i={i} />}
+                  width={'100%'}
+                  height={'100%'}
+                  boxShadow={'0 0 8px 1px lightgrey'}
+                />
+              </div>
+            </div>
+          );
+        })}
+        {userstories.map((item, i) => {
+          return (
+            <div className='tempSample'>
+              <div className='lowerPartRightContentContacts' key={i}>
+                <div className='imageAvatarLowerPartCta'>
+                  <Avatar
+                    image={item.thumbnail}
+                    alt={item.name}
+                    size={40}
+                    type='online'
+                    radius={50}
+                  />
+                </div>
+
+                <div className='labelAvatarLowerPartCta'>{item.name}</div>
+              </div>
+              <div className='lowerPartRightContentHidden'>
+                <Card
+                  padding={10}
+                  contents={<SampleContactsPopUp i={i} />}
+                  width={'100%'}
+                  height={'100%'}
+                  boxShadow={'0 0 8px 1px lightgrey'}
+                />
               </div>
             </div>
           );
