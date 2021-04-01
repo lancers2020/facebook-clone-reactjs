@@ -7,13 +7,30 @@ import { MdNotifications } from 'react-icons/md';
 import accountLogo from '../../sources/images/account.jpg';
 import Avatar from './../Avatar';
 import { Link } from 'react-router-dom';
+import { AiFillHome as Home } from 'react-icons/ai';
+import { AiOutlineUsergroupAdd as Friends } from 'react-icons/ai';
+import { HiUserGroup as Groups } from 'react-icons/hi';
+import { CgDetailsMore as More } from 'react-icons/cg';
 // import { MdHome } from 'react-icons/md';
 
 function Nav() {
   return (
     <div className='nav'>
       <div className='innerNav'>
-        <div className='centerNav'></div>
+        <div className='centerNav'>
+          <div className='centerNavHome'>
+            <Home size={40} color='#1877f2' />
+          </div>
+          <div className='centerNavFriends'>
+            <Friends size={40} color='grey' />
+          </div>
+          <div className='centerNavGroups'>
+            <Groups size={40} color='grey' />
+          </div>
+          <div className='centerNavMore'>
+            <More size={40} color='grey' />
+          </div>
+        </div>
         <div className='leftNav'>
           <div className='fbImageCta'>
             <Link to='/homepage'>
