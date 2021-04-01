@@ -10,6 +10,9 @@
   body {
     background: var(--secondary-color);
   }
+  .homeLeftContentParentCta {
+    display: none;
+  }
   .nav {
     //position is fixed so that the nav bar
     //wont be affected as well while the
@@ -728,6 +731,9 @@
   body {
     background: var(--secondary-color);
   }
+  .homeLeftContentParentCta {
+    display: none;
+  }
   .nav {
     //position is fixed so that the nav bar
     //wont be affected as well while the
@@ -1425,6 +1431,9 @@
 @media only screen and (min-width: 800px) {
   body {
     background: var(--secondary-color);
+  }
+  .homeLeftContentParentCta {
+    display: none;
   }
   .nav {
     //position is fixed so that the nav bar
@@ -2125,6 +2134,9 @@
   body {
     background: var(--secondary-color);
   }
+  .homeLeftContentParentCta {
+    display: none;
+  }
   .nav {
     //position is fixed so that the nav bar
     //wont be affected as well while the
@@ -2146,10 +2158,7 @@
         height: 100%;
         margin: 0 auto;
         width: 30%;
-        display: flex;
-        flex-direction: row;
-        place-content: space-between;
-        padding-top: 15px;
+        display: none;
       }
       .leftNav {
         position: absolute;
@@ -2821,10 +2830,148 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .homeLeftContentParentCta {
+    display: none;
+  }
+  .nav {
+    //position is fixed so that the nav bar
+    //wont be affected as well while the
+    //mydayArrow is being positioned absolute
+    //from its right being put into negative.
+    position: fixed;
+    height: 70px;
+    background: var(--tertiary-color);
+    width: 100%;
+    box-shadow: 0 1px 2px lightgrey;
+    z-index: 700;
+
+    .innerNav {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      .centerNav {
+        // background: wheat;
+        height: 100%;
+        margin: 0 auto;
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        place-content: space-between;
+        padding-top: 15px;
+      }
+      .leftNav {
+        position: absolute;
+        //   background: rgb(247, 202, 120);
+        height: 100%;
+        width: 165px;
+        left: 0;
+        top: 0;
+        display: flex;
+        .fbImageCta {
+          position: absolute;
+          margin-left: 1em;
+          padding: 10px;
+          width: 100%;
+          height: 100%;
+        }
+        .searchImageCta {
+          // background: red;
+          position: absolute;
+          left: 85px;
+          padding: 10px;
+          height: 100%;
+          &:hover {
+            cursor: pointer;
+          }
+          .borderRadius {
+            background: var(--secondary-color);
+            border-radius: 50%;
+            //   padding: 15px 8px 10px 15px;
+            width: 50px;
+            height: 50px;
+            .searchSign {
+              margin-top: 12px;
+              margin-bottom: 10px;
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+      .rightNav {
+        position: absolute;
+        //   background: rgb(243, 233, 216);
+        height: 100%;
+        width: 300px;
+        right: 0;
+        top: 0;
+        display: flex;
+        .container {
+          //   background: red;
+          width: 22%;
+          height: 108%;
+          margin: 0 3px;
+          .innerContainer {
+            background: var(--secondary-color);
+            width: 80%;
+            height: 67%;
+            margin: 10px 3px 6px 3px;
+            border-radius: 50%;
+            &:hover {
+              cursor: pointer;
+            }
+            &:hover + .createNavHiddenElement {
+              display: block;
+            }
+            &:hover + .messengerNavHiddenElement {
+              display: block;
+            }
+            &:hover + .notificationNavHiddenElement {
+              display: block;
+            }
+            .plusSign {
+              margin-top: 8px;
+              margin-left: 12px;
+            }
+            .messengerSign {
+              margin-top: 11px;
+              margin-left: 14px;
+            }
+            .notificationSign {
+              margin-top: 8px;
+              margin-left: 12px;
+            }
+          }
+          .account {
+            //   background: red;
+            margin: 10px 3px 6px 3px;
+            width: 80%;
+            height: 70%;
+            position: relative;
+            &:hover {
+              cursor: pointer;
+            }
+            &:hover + .accountNavHiddenElement {
+              display: block;
+            }
+            .accountImg {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (min-width: 1200px) {
   body {
     background: var(--secondary-color);
+  }
+  .homeLeftContentParentCta {
+    display: none;
   }
   .nav {
     //position is fixed so that the nav bar
@@ -3536,6 +3683,22 @@
     z-index: 1;
     overflow-y: scroll;
     bottom: 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &:hover {
+      &::-webkit-scrollbar {
+        display: block;
+        width: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgb(179, 179, 179);
+        border-radius: 10px;
+      }
+    }
     .homeRightContent {
       //   overflow-y: scroll;
       //   background: red;
@@ -3720,5 +3883,337 @@
   }
   .kapoy {
     // position: relative;
+  }
+}
+
+//this is the leftcontent view
+@media only screen and (min-width: 1600px) {
+  body {
+    background: var(--secondary-color);
+  }
+  .nav {
+    //position is fixed so that the nav bar
+    //wont be affected as well while the
+    //mydayArrow is being positioned absolute
+    //from its right being put into negative.
+    position: fixed;
+    height: 70px;
+    background: var(--tertiary-color);
+    width: 100%;
+    box-shadow: 0 1px 2px lightgrey;
+    z-index: 700;
+
+    .innerNav {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      .centerNav {
+        // background: wheat;
+        height: 100%;
+        margin: 0 auto;
+        width: 23%;
+        display: flex;
+        flex-direction: row;
+        place-content: space-between;
+        padding-top: 15px;
+        .centerNavMore {
+          display: none;
+        }
+      }
+      .leftNav {
+        position: absolute;
+        //   background: rgb(247, 202, 120);
+        height: 100%;
+        width: 165px;
+        left: 0;
+        top: 0;
+        display: flex;
+        .fbImageCta {
+          position: absolute;
+          margin-left: 1em;
+          padding: 10px;
+          width: 100%;
+          height: 100%;
+        }
+        .searchImageCta {
+          // background: red;
+          position: absolute;
+          left: 85px;
+          padding: 10px;
+          height: 100%;
+          &:hover {
+            cursor: pointer;
+          }
+          .borderRadius {
+            background: var(--secondary-color);
+            border-radius: 50%;
+            //   padding: 15px 8px 10px 15px;
+            width: 50px;
+            height: 50px;
+            .searchSign {
+              margin-top: 12px;
+              margin-bottom: 10px;
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+      .rightNav {
+        position: absolute;
+        //   background: rgb(243, 233, 216);
+        height: 100%;
+        width: 300px;
+        right: 0;
+        top: 0;
+        display: flex;
+        .container {
+          //   background: red;
+          width: 22%;
+          height: 108%;
+          margin: 0 3px;
+          .innerContainer {
+            background: var(--secondary-color);
+            width: 80%;
+            height: 67%;
+            margin: 10px 3px 6px 3px;
+            border-radius: 50%;
+            &:hover {
+              cursor: pointer;
+            }
+            &:hover + .createNavHiddenElement {
+              display: block;
+            }
+            &:hover + .messengerNavHiddenElement {
+              display: block;
+            }
+            &:hover + .notificationNavHiddenElement {
+              display: block;
+            }
+            .plusSign {
+              margin-top: 8px;
+              margin-left: 12px;
+            }
+            .messengerSign {
+              margin-top: 11px;
+              margin-left: 14px;
+            }
+            .notificationSign {
+              margin-top: 8px;
+              margin-left: 12px;
+            }
+          }
+          .account {
+            //   background: red;
+            margin: 10px 3px 6px 3px;
+            width: 80%;
+            height: 70%;
+            position: relative;
+            &:hover {
+              cursor: pointer;
+            }
+            &:hover + .accountNavHiddenElement {
+              display: block;
+            }
+            .accountImg {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .homeLeftContentParentCta {
+    width: 400px;
+    // height: 92%;
+    // border: 1px solid red;
+    display: block;
+    // background: yellow;
+
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 1;
+    overflow-y: scroll;
+    bottom: 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &:hover {
+      &::-webkit-scrollbar {
+        display: block;
+        width: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgb(179, 179, 179);
+        border-radius: 10px;
+      }
+    }
+    .homeLeftContent {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      .accountLeftBar {
+        border-radius: 13px;
+        height: 40px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // border: 1px solid rgb(116, 102, 241);
+        &:hover {
+          background: lightgrey;
+        }
+        h4 {
+          margin-left: 15px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+        }
+      }
+      .buttonsLeftBar {
+        border-radius: 13px;
+        height: 40px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+        &:hover {
+          background: lightgrey;
+        }
+      }
+      .hiddenButtonsLeftBar {
+        display: none;
+        // display: flex;
+        // flex-direction: row;
+        // align-items: center;
+        // font-family: Arial, Helvetica, sans-serif;
+        // font-weight: bold;
+        // font-size: 20px;
+        // color: black;
+        // margin: 10px 0;
+      }
+      .shownButtonsLeftBar {
+        border-radius: 13px;
+        height: 40px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+        &:hover {
+          background: lightgrey;
+        }
+      }
+      .seeMoreLess {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+        margin: 10px 0;
+        .seeMoreLessBtn {
+          border-radius: 50px;
+          background: lightgrey;
+          padding: 7px;
+        }
+      }
+      .leftBarBreak {
+        margin-top: 10px;
+        border-bottom: 2px solid lightgrey;
+        width: 100%;
+      }
+      .shortcuts {
+        .shotcutsLabel {
+          display: flex;
+          flex-direction: row;
+          place-content: space-between;
+          align-items: center;
+          padding: 5px 10px 10px 10px;
+          &:hover {
+            .h3 {
+              display: block;
+            }
+          }
+          h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: grey;
+          }
+          .h3 {
+            display: none;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(77, 46, 216);
+            font-size: 18px;
+          }
+        }
+        .shortcutsApp {
+          .firstApp {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 50px;
+            padding: 10px;
+            &:hover {
+              background: lightgray;
+              border-radius: 13px;
+            }
+            img {
+              width: 100px;
+              height: 50px;
+              margin-right: 15px;
+              border-radius: 10px;
+            }
+            h3 {
+              font-family: Arial, Helvetica, sans-serif;
+              color: black;
+            }
+          }
+          .secondApp {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 50px;
+            padding: 10px;
+            &:hover {
+              background: lightgray;
+              border-radius: 13px;
+            }
+            img {
+              width: 100px;
+              height: 50px;
+              margin-right: 15px;
+              border-radius: 10px;
+            }
+            h3 {
+              font-family: Arial, Helvetica, sans-serif;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .homefeedsParentCta {
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+    // border: 1px solid red;
+    .homefeeds {
+      width: 100%;
+      margin: 0 auto;
+      //   border: 1px solid blue;
+    }
   }
 }

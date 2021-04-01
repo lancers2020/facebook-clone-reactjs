@@ -6,14 +6,14 @@ import HomeRightContent from './HomeRightContent';
 function HomeContent() {
   return (
     <div className='homeContent'>
-      <HomeLeftContent />
+      <div className='homeLeftContentParentCta'>
+        <HomeLeftContent />
+      </div>
       <div className='homefeedsParentCta'>
         <HomeFeeds />
       </div>
-      <div className='kapoy'>
-        <div className='homeRightContentParentCta'>
-          <HomeRightContent />
-        </div>
+      <div className='homeRightContentParentCta'>
+        <HomeRightContent />
       </div>
     </div>
   );

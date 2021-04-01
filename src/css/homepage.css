@@ -9,6 +9,9 @@
   body {
     background: var(--secondary-color);
   }
+  .homeLeftContentParentCta {
+    display: none;
+  }
   .nav {
     position: fixed;
     height: 70px;
@@ -751,6 +754,9 @@
 @media only screen and (min-width: 700px) {
   body {
     background: var(--secondary-color);
+  }
+  .homeLeftContentParentCta {
+    display: none;
   }
   .nav {
     position: fixed;
@@ -1496,6 +1502,9 @@
   body {
     background: var(--secondary-color);
   }
+  .homeLeftContentParentCta {
+    display: none;
+  }
   .nav {
     position: fixed;
     height: 70px;
@@ -2240,6 +2249,9 @@
   body {
     background: var(--secondary-color);
   }
+  .homeLeftContentParentCta {
+    display: none;
+  }
   .nav {
     position: fixed;
     height: 70px;
@@ -2258,15 +2270,7 @@
     height: 100%;
     margin: 0 auto;
     width: 30%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    place-content: space-between;
-    padding-top: 15px;
+    display: none;
   }
   .nav .innerNav .leftNav {
     position: absolute;
@@ -2987,9 +2991,146 @@
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .homeLeftContentParentCta {
+    display: none;
+  }
+  .nav {
+    position: fixed;
+    height: 70px;
+    background: var(--tertiary-color);
+    width: 100%;
+    -webkit-box-shadow: 0 1px 2px lightgrey;
+            box-shadow: 0 1px 2px lightgrey;
+    z-index: 700;
+  }
+  .nav .innerNav {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .nav .innerNav .centerNav {
+    height: 100%;
+    margin: 0 auto;
+    width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    place-content: space-between;
+    padding-top: 15px;
+  }
+  .nav .innerNav .leftNav {
+    position: absolute;
+    height: 100%;
+    width: 165px;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav .innerNav .leftNav .fbImageCta {
+    position: absolute;
+    margin-left: 1em;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .nav .innerNav .leftNav .searchImageCta {
+    position: absolute;
+    left: 85px;
+    padding: 10px;
+    height: 100%;
+  }
+  .nav .innerNav .leftNav .searchImageCta:hover {
+    cursor: pointer;
+  }
+  .nav .innerNav .leftNav .searchImageCta .borderRadius {
+    background: var(--secondary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .nav .innerNav .leftNav .searchImageCta .borderRadius .searchSign {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+  }
+  .nav .innerNav .rightNav {
+    position: absolute;
+    height: 100%;
+    width: 300px;
+    right: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav .innerNav .rightNav .container {
+    width: 22%;
+    height: 108%;
+    margin: 0 3px;
+  }
+  .nav .innerNav .rightNav .container .innerContainer {
+    background: var(--secondary-color);
+    width: 80%;
+    height: 67%;
+    margin: 10px 3px 6px 3px;
+    border-radius: 50%;
+  }
+  .nav .innerNav .rightNav .container .innerContainer:hover {
+    cursor: pointer;
+  }
+  .nav .innerNav .rightNav .container .innerContainer:hover + .createNavHiddenElement {
+    display: block;
+  }
+  .nav .innerNav .rightNav .container .innerContainer:hover + .messengerNavHiddenElement {
+    display: block;
+  }
+  .nav .innerNav .rightNav .container .innerContainer:hover + .notificationNavHiddenElement {
+    display: block;
+  }
+  .nav .innerNav .rightNav .container .innerContainer .plusSign {
+    margin-top: 8px;
+    margin-left: 12px;
+  }
+  .nav .innerNav .rightNav .container .innerContainer .messengerSign {
+    margin-top: 11px;
+    margin-left: 14px;
+  }
+  .nav .innerNav .rightNav .container .innerContainer .notificationSign {
+    margin-top: 8px;
+    margin-left: 12px;
+  }
+  .nav .innerNav .rightNav .container .account {
+    margin: 10px 3px 6px 3px;
+    width: 80%;
+    height: 70%;
+    position: relative;
+  }
+  .nav .innerNav .rightNav .container .account:hover {
+    cursor: pointer;
+  }
+  .nav .innerNav .rightNav .container .account:hover + .accountNavHiddenElement {
+    display: block;
+  }
+  .nav .innerNav .rightNav .container .account .accountImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   body {
     background: var(--secondary-color);
+  }
+  .homeLeftContentParentCta {
+    display: none;
   }
   .nav {
     position: fixed;
@@ -3747,6 +3888,20 @@
     overflow-y: scroll;
     bottom: 0;
   }
+  .homeRightContentParentCta::-webkit-scrollbar {
+    display: none;
+  }
+  .homeRightContentParentCta:hover::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+  }
+  .homeRightContentParentCta:hover::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .homeRightContentParentCta:hover::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+    border-radius: 10px;
+  }
   .homeRightContentParentCta .homeRightContent .lowerPartRightContentCta {
     display: block;
   }
@@ -3936,6 +4091,366 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  body {
+    background: var(--secondary-color);
+  }
+  .nav {
+    position: fixed;
+    height: 70px;
+    background: var(--tertiary-color);
+    width: 100%;
+    -webkit-box-shadow: 0 1px 2px lightgrey;
+            box-shadow: 0 1px 2px lightgrey;
+    z-index: 700;
+  }
+  .nav .innerNav {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .nav .innerNav .centerNav {
+    height: 100%;
+    margin: 0 auto;
+    width: 23%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    place-content: space-between;
+    padding-top: 15px;
+  }
+  .nav .innerNav .centerNav .centerNavMore {
+    display: none;
+  }
+  .nav .innerNav .leftNav {
+    position: absolute;
+    height: 100%;
+    width: 165px;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav .innerNav .leftNav .fbImageCta {
+    position: absolute;
+    margin-left: 1em;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .nav .innerNav .leftNav .searchImageCta {
+    position: absolute;
+    left: 85px;
+    padding: 10px;
+    height: 100%;
+  }
+  .nav .innerNav .leftNav .searchImageCta:hover {
+    cursor: pointer;
+  }
+  .nav .innerNav .leftNav .searchImageCta .borderRadius {
+    background: var(--secondary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .nav .innerNav .leftNav .searchImageCta .borderRadius .searchSign {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+  }
+  .nav .innerNav .rightNav {
+    position: absolute;
+    height: 100%;
+    width: 300px;
+    right: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav .innerNav .rightNav .container {
+    width: 22%;
+    height: 108%;
+    margin: 0 3px;
+  }
+  .nav .innerNav .rightNav .container .innerContainer {
+    background: var(--secondary-color);
+    width: 80%;
+    height: 67%;
+    margin: 10px 3px 6px 3px;
+    border-radius: 50%;
+  }
+  .nav .innerNav .rightNav .container .innerContainer:hover {
+    cursor: pointer;
+  }
+  .nav .innerNav .rightNav .container .innerContainer:hover + .createNavHiddenElement {
+    display: block;
+  }
+  .nav .innerNav .rightNav .container .innerContainer:hover + .messengerNavHiddenElement {
+    display: block;
+  }
+  .nav .innerNav .rightNav .container .innerContainer:hover + .notificationNavHiddenElement {
+    display: block;
+  }
+  .nav .innerNav .rightNav .container .innerContainer .plusSign {
+    margin-top: 8px;
+    margin-left: 12px;
+  }
+  .nav .innerNav .rightNav .container .innerContainer .messengerSign {
+    margin-top: 11px;
+    margin-left: 14px;
+  }
+  .nav .innerNav .rightNav .container .innerContainer .notificationSign {
+    margin-top: 8px;
+    margin-left: 12px;
+  }
+  .nav .innerNav .rightNav .container .account {
+    margin: 10px 3px 6px 3px;
+    width: 80%;
+    height: 70%;
+    position: relative;
+  }
+  .nav .innerNav .rightNav .container .account:hover {
+    cursor: pointer;
+  }
+  .nav .innerNav .rightNav .container .account:hover + .accountNavHiddenElement {
+    display: block;
+  }
+  .nav .innerNav .rightNav .container .account .accountImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .homeLeftContentParentCta {
+    width: 400px;
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 1;
+    overflow-y: scroll;
+    bottom: 0;
+  }
+  .homeLeftContentParentCta::-webkit-scrollbar {
+    display: none;
+  }
+  .homeLeftContentParentCta:hover::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+  }
+  .homeLeftContentParentCta:hover::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .homeLeftContentParentCta:hover::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+    border-radius: 10px;
+  }
+  .homeLeftContentParentCta .homeLeftContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .accountLeftBar {
+    border-radius: 13px;
+    height: 40px;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .homeLeftContentParentCta .homeLeftContent .accountLeftBar:hover {
+    background: lightgrey;
+  }
+  .homeLeftContentParentCta .homeLeftContent .accountLeftBar h4 {
+    margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .buttonsLeftBar {
+    border-radius: 13px;
+    height: 40px;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .homeLeftContentParentCta .homeLeftContent .buttonsLeftBar:hover {
+    background: lightgrey;
+  }
+  .homeLeftContentParentCta .homeLeftContent .hiddenButtonsLeftBar {
+    display: none;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shownButtonsLeftBar {
+    border-radius: 13px;
+    height: 40px;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shownButtonsLeftBar:hover {
+    background: lightgrey;
+  }
+  .homeLeftContentParentCta .homeLeftContent .seeMoreLess {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    margin: 10px 0;
+  }
+  .homeLeftContentParentCta .homeLeftContent .seeMoreLess .seeMoreLessBtn {
+    border-radius: 50px;
+    background: lightgrey;
+    padding: 7px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .leftBarBreak {
+    margin-top: 10px;
+    border-bottom: 2px solid lightgrey;
+    width: 100%;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shotcutsLabel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    place-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5px 10px 10px 10px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shotcutsLabel:hover .h3 {
+    display: block;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shotcutsLabel h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shotcutsLabel .h3 {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4d2ed8;
+    font-size: 18px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shortcutsApp .firstApp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px;
+    padding: 10px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shortcutsApp .firstApp:hover {
+    background: lightgray;
+    border-radius: 13px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shortcutsApp .firstApp img {
+    width: 100px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shortcutsApp .firstApp h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shortcutsApp .secondApp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px;
+    padding: 10px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shortcutsApp .secondApp:hover {
+    background: lightgray;
+    border-radius: 13px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shortcutsApp .secondApp img {
+    width: 100px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  .homeLeftContentParentCta .homeLeftContent .shortcuts .shortcutsApp .secondApp h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  .homefeedsParentCta {
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+  }
+  .homefeedsParentCta .homefeeds {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=homepage.css.map */

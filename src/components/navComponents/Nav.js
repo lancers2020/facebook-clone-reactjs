@@ -8,7 +8,7 @@ import accountLogo from '../../sources/images/account.jpg';
 import Avatar from './../Avatar';
 import { Link } from 'react-router-dom';
 import { AiFillHome as Home } from 'react-icons/ai';
-import { AiOutlineUsergroupAdd as Friends } from 'react-icons/ai';
+import { FaUserFriends as Friends } from 'react-icons/fa';
 import { HiUserGroup as Groups } from 'react-icons/hi';
 import { CgDetailsMore as More } from 'react-icons/cg';
 // import { MdHome } from 'react-icons/md';
